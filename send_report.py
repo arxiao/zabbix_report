@@ -22,15 +22,9 @@ import numpy as np
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-business = {'互联网':'郑华龙','平台数据部':'邓力','crm1.0':'方建平','crm2.0':'吴泽君','coreuser':'叶周万','Unknown':'Unknown'}
-operation = {'互联网':'李仕栲','平台数据部':'彭海波','crm1.0':'唐财俊','crm2.0':'唐财俊','coreuser':'陈晓丰','Unknown':'Unknown'}
 
 def send_mail(to_list, sub):
       me = mail_user 
-      to_reciver=['xiaofeng.chen@zhenai.com','xiaojie.lin@zhenai.com','shikao.li@zhenai.com','haibo.peng@zhenai.com','caijun.tang@zhenai.com','jinghua.luo@zhenai.com']
-      #to_reciver=['xiaofeng.chen@zhenai.com']
-      cc_reciver=['chengtao.fan@zhenai.com','hongyan.dong@zhenai.com']
-      #cc_reciver=['xiaofeng.chen@zhenai.com']
       msg = MIMEMultipart()
       msg['Subject'] = sub
       msg['From'] = 'Monitor Center'
@@ -442,9 +436,9 @@ def send_mail(to_list, sub):
               return False
 if __name__ == '__main__':
   mail_host='smtp.exmail.qq.com'
-  mail_user='alarm@zhenai.com'
-  mail_pass='%3Fp&7pQa#'
-  mailto_list = ['xiaofeng.chen@zhenai.com']
+  mail_user='*******'
+  mail_pass='**********'
+  mailto_list = ['']
   sub= "监控系统运营周报"
   sub=sub.decode('utf-8')
   if send_mail(mailto_list, sub):
